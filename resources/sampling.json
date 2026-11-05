@@ -1,0 +1,268 @@
+{
+  "sample_sizes": [
+    125,
+    200,
+    315
+  ],
+  "plans": [
+    {
+      "value": "japan",
+      "label": "Japan"
+    },
+    {
+      "value": "non_japan",
+      "label": "Non-Japan"
+    },
+    {
+      "value": "non_medical",
+      "label": "Non-Medical"
+    }
+  ],
+  "limits": {
+    "125": {
+      "japan": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 0,
+          "rej": 1,
+          "row": 4
+        },
+        "Holes": {
+          "aql": 1.5,
+          "acc": 5,
+          "rej": 6,
+          "row": 5
+        },
+        "Major": {
+          "aql": 1.5,
+          "acc": 5,
+          "rej": 6,
+          "row": 7
+        },
+        "Minor": {
+          "aql": 2.5,
+          "acc": 7,
+          "rej": 8,
+          "row": 10
+        }
+      },
+      "non_japan": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 0,
+          "rej": 1,
+          "row": 4
+        },
+        "Holes": {
+          "aql": 1.5,
+          "acc": 5,
+          "rej": 6,
+          "row": 5
+        },
+        "Major": {
+          "aql": 2.5,
+          "acc": 7,
+          "rej": 8,
+          "row": 8
+        },
+        "Minor": {
+          "aql": 4,
+          "acc": 10,
+          "rej": 11,
+          "row": 11
+        }
+      },
+      "non_medical": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 0,
+          "rej": 1,
+          "row": 4
+        },
+        "Holes": {
+          "aql": 4,
+          "acc": 10,
+          "rej": 11,
+          "row": 6
+        },
+        "Major": {
+          "aql": 6.5,
+          "acc": 14,
+          "rej": 15,
+          "row": 9
+        },
+        "Minor": {
+          "aql": 6.5,
+          "acc": 14,
+          "rej": 15,
+          "row": 12
+        }
+      }
+    },
+    "200": {
+      "japan": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 1,
+          "rej": 2,
+          "row": 13
+        },
+        "Holes": {
+          "aql": 1.5,
+          "acc": 7,
+          "rej": 8,
+          "row": 14
+        },
+        "Major": {
+          "aql": 1.5,
+          "acc": 7,
+          "rej": 8,
+          "row": 16
+        },
+        "Minor": {
+          "aql": 2.5,
+          "acc": 10,
+          "rej": 11,
+          "row": 19
+        }
+      },
+      "non_japan": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 1,
+          "rej": 2,
+          "row": 13
+        },
+        "Holes": {
+          "aql": 1.5,
+          "acc": 7,
+          "rej": 8,
+          "row": 14
+        },
+        "Major": {
+          "aql": 2.5,
+          "acc": 10,
+          "rej": 11,
+          "row": 17
+        },
+        "Minor": {
+          "aql": 4,
+          "acc": 14,
+          "rej": 15,
+          "row": 20
+        }
+      },
+      "non_medical": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 1,
+          "rej": 2,
+          "row": 13
+        },
+        "Holes": {
+          "aql": 4,
+          "acc": 14,
+          "rej": 15,
+          "row": 15
+        },
+        "Major": {
+          "aql": 6.5,
+          "acc": 21,
+          "rej": 22,
+          "row": 18
+        },
+        "Minor": {
+          "aql": 6.5,
+          "acc": 21,
+          "rej": 22,
+          "row": 21
+        }
+      }
+    },
+    "315": {
+      "japan": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 2,
+          "rej": 3,
+          "row": 22
+        },
+        "Holes": {
+          "aql": 1.5,
+          "acc": 10,
+          "rej": 11,
+          "row": 23
+        },
+        "Major": {
+          "aql": 1.5,
+          "acc": 10,
+          "rej": 11,
+          "row": 25
+        },
+        "Minor": {
+          "aql": 2.5,
+          "acc": 14,
+          "rej": 15,
+          "row": 28
+        }
+      },
+      "non_japan": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 2,
+          "rej": 3,
+          "row": 22
+        },
+        "Holes": {
+          "aql": 1.5,
+          "acc": 10,
+          "rej": 11,
+          "row": 23
+        },
+        "Major": {
+          "aql": 2.5,
+          "acc": 14,
+          "rej": 15,
+          "row": 26
+        },
+        "Minor": {
+          "aql": 4,
+          "acc": 21,
+          "rej": 22,
+          "row": 29
+        }
+      },
+      "non_medical": {
+        "Critical": {
+          "aql": 0.25,
+          "acc": 2,
+          "rej": 3,
+          "row": 22
+        },
+        "Holes": {
+          "aql": 4,
+          "acc": 21,
+          "rej": 22,
+          "row": 24
+        },
+        "Major": {
+          "aql": 6.5,
+          "acc": 21,
+          "rej": 22,
+          "row": 27
+        },
+        "Minor": {
+          "aql": 6.5,
+          "acc": 21,
+          "rej": 22,
+          "row": 30
+        }
+      }
+    }
+  },
+  "source": {
+    "file": "M26 QA List.xlsx",
+    "sheet": "Sampling Acceptance",
+    "sha256": "df8ff082f20e247544cc7c439ee717b1d5d306e09548fbc610ccdec78df6dd54"
+  }
+}

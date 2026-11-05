@@ -1,0 +1,485 @@
+{
+  "products": {
+    "hdpe": {
+      "label": "HDPE",
+      "references": {
+        "Glove Type": [
+          "Demo glove"
+        ],
+        "Size": [
+          "M",
+          "L"
+        ],
+        "Colour": [
+          "Clear"
+        ],
+        "Inspector ID": [
+          "DEMO-001",
+          "DEMO-002"
+        ],
+        "Inspection Status": [
+          "1st Inspection",
+          "2nd Inspection",
+          "3rd Inspection",
+          "4th Inspection"
+        ],
+        "HD No.": [
+          "DEMO-EQUIPMENT-01"
+        ]
+      },
+      "metrics": [
+        {
+          "key": "weight",
+          "label": "Glove weight",
+          "unit": "g",
+          "samples": 1,
+          "section": "measurements"
+        },
+        {
+          "key": "length_a",
+          "label": "Length A",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "length_b",
+          "label": "Length B",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "header_length",
+          "label": "Header length",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "header_width",
+          "label": "Header width",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "gap_length",
+          "label": "Gap length",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "palm_width",
+          "label": "Palm width",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "glove_width",
+          "label": "Glove width",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "thickness",
+          "label": "Thickness",
+          "unit": "mm",
+          "samples": 3,
+          "section": "measurements"
+        }
+      ],
+      "tests": [
+        {
+          "key": "header_seal",
+          "label": "Header sealing",
+          "samples": 3,
+          "defects": [
+            "PPH",
+            "HHM"
+          ]
+        },
+        {
+          "key": "cuff_seal",
+          "label": "Cuff sealing",
+          "samples": 3,
+          "failure": "Weak Sealing Side Glove"
+        },
+        {
+          "key": "donning",
+          "label": "Donning & tearing",
+          "samples": 3,
+          "failure": "Weak Sealing Donning"
+        },
+        {
+          "key": "smell",
+          "label": "Smelly test",
+          "samples": 1,
+          "failure": "Bad Smell"
+        },
+        {
+          "key": "layering",
+          "label": "Layering",
+          "samples": 1,
+          "defects": [
+            "Poor",
+            "Outside header"
+          ]
+        }
+      ]
+    },
+    "cpetpe": {
+      "label": "CPE / TPE",
+      "references": {
+        "Glove Type": [
+          "Demo glove"
+        ],
+        "Size": [
+          "M",
+          "L"
+        ],
+        "Colour": [
+          "Clear"
+        ],
+        "Embossment": [
+          "Plain"
+        ],
+        "Inspector ID": [
+          "DEMO-001",
+          "DEMO-002"
+        ],
+        "Inspection Status": [
+          "1st Inspection",
+          "2nd Inspection",
+          "3rd Inspection",
+          "4th Inspection"
+        ],
+        "STM No.": [
+          "DEMO-EQUIPMENT-01"
+        ]
+      },
+      "metrics": [
+        {
+          "key": "weight",
+          "label": "Glove weight",
+          "unit": "g",
+          "samples": 1,
+          "section": "measurements"
+        },
+        {
+          "key": "glove_length",
+          "label": "Glove length",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "palm_width",
+          "label": "Palm width",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "glove_width",
+          "label": "Glove width",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "middle_finger",
+          "label": "Middle finger length",
+          "unit": "mm",
+          "samples": 13,
+          "section": "measurements"
+        },
+        {
+          "key": "thickness",
+          "label": "Thickness before embossing",
+          "unit": "mm",
+          "samples": 3,
+          "section": "measurements"
+        },
+        {
+          "key": "air_pump",
+          "label": "Air pump test",
+          "unit": "",
+          "samples": 5,
+          "section": "tests"
+        }
+      ],
+      "tests": [
+        {
+          "key": "fstm",
+          "label": "FSTM",
+          "samples": 3,
+          "failure": "Weak Sealing FSTM"
+        },
+        {
+          "key": "cuff_seal",
+          "label": "Cuff sealing",
+          "samples": 3,
+          "failure": "Weak Sealing Side Glove"
+        },
+        {
+          "key": "donning",
+          "label": "Donning & tearing",
+          "samples": 3,
+          "failure": "Weak Sealing Donning"
+        },
+        {
+          "key": "smell",
+          "label": "Smelly test",
+          "samples": 1,
+          "failure": "Bad Smell"
+        }
+      ]
+    }
+  },
+  "specifications": [
+    {
+      "id": "DEMO-HDPE",
+      "product": "hdpe",
+      "reference": "Demo reference",
+      "product_type": "Demo product",
+      "glove_type": "Demo glove",
+      "size": "M",
+      "revision": "DEMO",
+      "source": "Fictional portfolio data",
+      "limits": {
+        "weight": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "length_a": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "length_b": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "header_length": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "header_width": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "gap_length": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "palm_width": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "glove_width": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "thickness": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        }
+      }
+    },
+    {
+      "id": "DEMO-CPETPE",
+      "product": "cpetpe",
+      "reference": "Demo reference",
+      "product_type": "Demo product",
+      "glove_type": "Demo glove",
+      "size": "M",
+      "revision": "DEMO",
+      "source": "Fictional portfolio data",
+      "limits": {
+        "weight": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "glove_length": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "palm_width": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "glove_width": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "middle_finger": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "thickness": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        },
+        "air_pump": {
+          "min": 1.0,
+          "max": 2.0,
+          "nominal": 1.5,
+          "na": false,
+          "source": "Fictional portfolio data"
+        }
+      }
+    }
+  ],
+  "defects": [
+    {
+      "id": "DEMO-hdpe-1",
+      "product": "hdpe",
+      "category": "Critical",
+      "name": "Demo Critical defect",
+      "code": "DEMO-1",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-hdpe-2",
+      "product": "hdpe",
+      "category": "Holes",
+      "name": "Demo Holes defect",
+      "code": "DEMO-2",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-hdpe-3",
+      "product": "hdpe",
+      "category": "Major",
+      "name": "Demo Major defect",
+      "code": "DEMO-3",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-hdpe-4",
+      "product": "hdpe",
+      "category": "Minor",
+      "name": "Demo Minor defect",
+      "code": "DEMO-4",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-hdpe-5",
+      "product": "hdpe",
+      "category": "Packaging",
+      "name": "Demo Packaging defect",
+      "code": "DEMO-5",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-cpetpe-1",
+      "product": "cpetpe",
+      "category": "Critical",
+      "name": "Demo Critical defect",
+      "code": "DEMO-1",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-cpetpe-2",
+      "product": "cpetpe",
+      "category": "Holes",
+      "name": "Demo Holes defect",
+      "code": "DEMO-2",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-cpetpe-3",
+      "product": "cpetpe",
+      "category": "Major",
+      "name": "Demo Major defect",
+      "code": "DEMO-3",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-cpetpe-4",
+      "product": "cpetpe",
+      "category": "Minor",
+      "name": "Demo Minor defect",
+      "code": "DEMO-4",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    },
+    {
+      "id": "DEMO-cpetpe-5",
+      "product": "cpetpe",
+      "category": "Packaging",
+      "name": "Demo Packaging defect",
+      "code": "DEMO-5",
+      "classification": null,
+      "source": "Fictional portfolio data"
+    }
+  ],
+  "sources": {
+    "hdpe": {
+      "file": "fictional-demo-data",
+      "sha256": "",
+      "demo": true
+    },
+    "cpetpe": {
+      "file": "fictional-demo-data",
+      "sha256": "",
+      "demo": true
+    }
+  }
+}

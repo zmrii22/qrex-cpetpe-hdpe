@@ -1,0 +1,31 @@
+# Private configuration and credentials
+.env
+.env.*
+!.env.example
+**/config.local.php
+**/database.local.php
+**/secrets.local.php
+**/*token*.txt
+**/*credentials*.json
+**/*service-account*.json
+*.key
+*.p12
+*.pfx
+# Runtime and user evidence
+**/uploads/*
+!**/uploads/.gitkeep
+!**/uploads/.htaccess
+**/cache/*
+!**/cache/.gitkeep
+**/storage/*
+!**/storage/.gitkeep
+*.log
+*.sqlite*
+*.db
+*.zip
+*.bak
+node_modules/
+vendor/
+tests/artifacts/
+.DS_Store
+Thumbs.db

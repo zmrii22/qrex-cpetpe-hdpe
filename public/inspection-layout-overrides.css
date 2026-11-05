@@ -1,0 +1,289 @@
+.defect-column-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.defect-item {
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    background: #fff;
+    padding: 9px;
+}
+
+.defect-item.failed {
+    background: #fff8f8;
+    border-color: #efced1;
+}
+
+.defect-item-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.defect-item .defect-state {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.defect-item .defect-code {
+    margin: 0;
+    flex: 0 0 auto;
+}
+
+.defect-item .defect-name {
+    min-height: 18px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.defect-item-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 66px;
+    gap: 7px;
+    align-items: center;
+}
+
+.defect-item .segments {
+    width: 100%;
+}
+
+.defect-item .segments button {
+    flex: 1;
+    min-width: 0;
+    padding: 6px 5px;
+}
+
+.defect-item .defect-qty {
+    height: 31px;
+    padding: 6px 8px;
+}
+
+@media (max-width: 1250px) {
+    .defect-column-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 980px) {
+    .defect-column-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .defect-item .defect-name {
+        display: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .defect-column-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.visual-defect-table-wrap {
+    overflow-x: visible;
+}
+
+.visual-defect-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.visual-defect-table th {
+    padding: 10px;
+    text-align: left;
+}
+
+.visual-defect-table td {
+    padding: 7px;
+    vertical-align: top;
+}
+
+.visual-defect-table td.failed {
+    background: #fff8f8;
+}
+
+.visual-defect-empty {
+    color: var(--muted);
+    text-align: center;
+}
+
+.visual-defect-entry {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+}
+
+.visual-defect-line {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+}
+
+.visual-defect-line .defect-code {
+    margin: 0;
+    flex: 0 0 auto;
+    font-weight: 550;
+}
+
+.visual-defect-line .defect-name {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.visual-defect-table .defect-qty {
+    height: 26px;
+    padding: 4px 6px;
+    font-size: 12px;
+}
+
+@media (max-width: 1200px) {
+    .visual-defect-table th,
+    .visual-defect-table td {
+        padding: 6px;
+    }
+
+    .visual-defect-entry {
+        grid-template-columns: minmax(0, 1fr) 44px;
+        gap: 5px;
+    }
+
+    .visual-defect-line .defect-name {
+        display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .visual-defect-table-wrap {
+        overflow-x: auto;
+    }
+
+    .visual-defect-table {
+        min-width: 760px;
+    }
+}
+
+.sampling-section-head { align-items: flex-start; gap: 12px; padding: 8px 14px; }
+.sampling-reference { flex: 1; min-width: 0; }
+.sampling-reference-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; }
+.sampling-reference-heading { display: flex; align-items: baseline; gap: 6px 12px; flex-wrap: wrap; min-width: 0; }
+.sampling-reference-heading h2 { font-size: 14px; line-height: 1.3; }
+.sampling-reference-heading > span { font-size: 11px; color: var(--muted); }
+.sampling-size-label { font-size: 12px; color: var(--muted); }
+.sampling-reference-wrap { margin-top: 6px; max-width: 100%; }
+.sampling-reference-table { width: 100%; min-width: 0; table-layout: fixed; border-collapse: collapse; font-size: 12px; }
+.sampling-reference-table th, .sampling-reference-table td { padding: 3px 8px; border: 0; border-bottom: 1px solid var(--line); text-align: center; white-space: normal; overflow-wrap: anywhere; line-height: 1.3; }
+.sampling-reference-table tr > :first-child { width: 25%; text-align: left; }
+.sampling-reference-table tbody th { font-weight: 550; font-size: 12px; text-transform: none; }
+.sampling-reference-table thead th { font-size: 11px; text-transform: none; background: var(--soft); }
+.sampling-reference-empty { margin: 10px 0 0; color: var(--muted); font-size: 12px; }
+#record-defects > .sampling-reference { margin: 10px 0 14px; }
+.defect-summary-chip { display: grid; grid-template-columns: minmax(0,1fr) auto auto auto; grid-template-areas: "name reference total result"; gap: 6px; min-height: 54px; }
+.defect-summary-chip .defect-category-name { grid-area: name; white-space: normal; overflow-wrap: anywhere; }
+.defect-summary-chip .defect-category-total { grid-area: total; margin-left: 0; font-variant-numeric: tabular-nums; }
+.defect-summary-chip > .status { grid-area: result; display: inline-flex; justify-self: end; }
+.defect-summary-chip .defect-aql-reference { grid-area: reference; display: flex; flex-direction: column; gap: 2px; min-width: 0; overflow: visible; white-space: normal; }
+.defect-summary-chip .defect-aql-reference > span { font-size: 10px; line-height: 1.3; font-weight: 400; white-space: normal; overflow: visible; overflow-wrap: anywhere; }
+@media screen and (max-width: 1500px) {
+    .defect-summary-chip { grid-template-columns: minmax(0,1fr) auto auto; grid-template-areas: "name total result" "reference reference reference"; }
+    .defect-summary-chip .defect-aql-reference { flex-direction: row; flex-wrap: wrap; gap: 2px 10px; }
+}
+@media screen and (max-width: 1100px) {
+    .defect-summary-row { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media screen and (max-width: 760px) {
+    .defect-summary-row { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media screen and (max-width: 500px) {
+    .defect-summary-row { grid-template-columns: 1fr; }
+    .defect-summary-chip { grid-template-columns: minmax(0,1fr) auto auto auto; grid-template-areas: "name reference total result"; }
+    .defect-summary-chip .defect-aql-reference { flex-direction: column; gap: 2px; }
+}
+
+@media screen {
+    .workspace { width: 100%; max-width: none; padding-inline: 18px; }
+    .field-grid > *, .key-values > *, .order-kv > *, .record-field-grid > * { min-width: 0; }
+    .field > span, .key-values dd, .record-field-grid dd { overflow-wrap: anywhere; }
+    #dialog {
+        --dialog-edge: 24px;
+        --dialog-limit: min(84dvh,760px);
+        width: min(600px,calc(100vw - 2 * var(--dialog-edge)));
+        max-width: min(820px,calc(100vw - 2 * var(--dialog-edge)));
+        max-height: var(--dialog-limit);
+        overflow: hidden;
+    }
+    #dialog #dialog-form { display: flex; flex-direction: column; max-height: calc(var(--dialog-limit) - 2px); min-height: 0; }
+    #dialog-form > :is(.dialog-head,.dialog-foot,#dialog-error) { flex: 0 0 auto; }
+    #dialog #dialog-form > .dialog-body { min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 16px; }
+    #dialog .dialog-head { gap: 12px; padding: 12px 16px; }
+    #dialog .dialog-head h2 { min-width: 0; font-size: 16px; overflow-wrap: anywhere; }
+    #dialog .dialog-foot { padding: 12px 16px; flex-wrap: wrap; }
+    #dialog .dialog-body p { font-size: 12px; margin-bottom: 12px; line-height: 1.5; }
+    #dialog .field-grid { gap: 12px 16px; }
+    #dialog :is(input:not([type=checkbox]):not([type=radio]),select) { height: 34px; min-width: 0; font-size: 13px; padding: 6px 9px; }
+    #dialog textarea { height: 72px; font-size: 13px; }
+    #dialog .btn { height: auto; min-height: 34px; padding: 6px 10px; line-height: 1.3; font-size: 12px; }
+    #dialog .unit-list { max-height: none; overflow: visible; }
+    #dialog.inspection-create-dialog { width: min(820px,calc(100vw - 2 * var(--dialog-edge))) !important; }
+    #dialog .creation-context { grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; }
+    #dialog .creation-context .order-search-row { display: flex; flex-direction: column; gap: 7px; margin-top: 0; min-width: 0; font-size: 12px; font-weight: 550; }
+    #dialog .creation-context .input-action { flex-direction: row; align-items: center; gap: 8px; }
+    #dialog .creation-context .input-action input { min-width: 0; }
+    #dialog .creation-context .input-action .btn { width: auto; flex: 0 0 auto; }
+    #dialog .order-preview { margin-top: 14px; padding: 12px; gap: 12px; }
+    .inspection-create-dialog .size-picker { max-height: none; overflow: visible; }
+    .inspection-create-dialog .carton-plan-counts { width: 48%; grid-template-columns: repeat(2,minmax(0,1fr)); }
+    .inspection-create-dialog .carton-plan-counts .mini-field { grid-template-rows: minmax(18px,auto) 34px minmax(16px,auto); }
+    .visual-defect-line .defect-name { display: block; white-space: normal; overflow-wrap: anywhere; }
+}
+
+@media screen and (max-width: 1000px) {
+    .visual-defect-table, .visual-defect-table tbody { display: block; min-width: 0; }
+    .visual-defect-table thead { display: none; }
+    .visual-defect-table tbody { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 8px; }
+    .visual-defect-table tr { display: contents; }
+    .visual-defect-table td { display: block; min-width: 0; border: 1px solid var(--line); border-radius: 4px; }
+    .visual-defect-table td::before { content: attr(data-visual-category); display: block; font-size: 10px; font-weight: 650; color: var(--muted); margin-bottom: 6px; }
+    .visual-defect-table td.visual-defect-empty { display: none; }
+    .visual-defect-table-wrap { overflow: visible; }
+    .visual-defect-entry { grid-template-columns: minmax(0,1fr) 52px; }
+    .inspection-create-dialog .size-choice { flex-wrap: wrap; }
+    .inspection-create-dialog .size-select { width: 100%; }
+    .inspection-create-dialog .carton-plan-counts { width: 100%; }
+}
+
+@media screen and (max-width: 600px) {
+    .workspace { padding-inline: 10px; }
+    .inspection-space .key-values { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+    #dialog { --dialog-edge: 12px; }
+    #dialog .creation-context { grid-template-columns: 1fr; }
+    .sampling-section-head { padding: 10px 12px; }
+    .sampling-reference-toolbar { gap: 10px; }
+    .sampling-reference-table th, .sampling-reference-table td { padding: 3px 4px; font-size: 11px; }
+    .sampling-reference-table tr > :first-child { width: 22%; }
+    .visual-defect-table tbody { grid-template-columns: 1fr; }
+    #dialog #dialog-form > .dialog-body { padding: 14px; }
+    .inspection-create-dialog .carton-plan-counts { grid-template-columns: 1fr; }
+    .dialog-head, .dialog-foot { padding: 14px; }
+    .dialog-head h2 { font-size: 17px; }
+    .dialog-foot { flex-wrap: wrap; }
+}
+
+@media print {
+    .sampling-reference-table { min-width: 0; font-size: 10px; }
+    .sampling-reference { break-inside: avoid; }
+}

@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^(app|config|resources|storage|tools|tests|docs)(/|$) - [F,L]
+RewriteRule ^$ public/ [R=302,L]

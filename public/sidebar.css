@@ -1,0 +1,73 @@
+:root { --rail: 64px; --rail-expanded: 232px; }
+.rail {
+    width: var(--rail);
+    padding: 22px 8px 14px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    contain: layout style;
+    transition: width 180ms cubic-bezier(.2,.8,.2,1), box-shadow 180ms ease;
+}
+.rail .brand { padding: 0 8px 18px; gap: 12px; white-space: nowrap; }
+.rail .brand-logo { width: 32px; height: 38px; flex: 0 0 32px; }
+.rail .brand-copy, .rail .nav-link span, .rail .account-copy {
+    display: block;
+    max-width: 0;
+    opacity: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: opacity 120ms ease, max-width 180ms cubic-bezier(.2,.8,.2,1), margin-left 180ms ease;
+}
+.rail .nav-group .eyebrow {
+    display: block;
+    position: relative;
+    height: 18px;
+    padding: 0 12px;
+    color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: color 120ms ease;
+}
+.rail .nav-group .eyebrow::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-top: 1px solid #c5cfd2;
+    pointer-events: none;
+    transition: opacity 120ms ease;
+}
+.rail .nav-group { margin-bottom: 22px; }
+.rail .nav-link { justify-content: flex-start; gap: 0; padding: 10px 14px; min-height: 42px; }
+.rail .nav-link > .ti { width: 20px; flex: 0 0 20px; font-size: 19px; }
+.rail .nav-link span { margin-left: 0; }
+.rail .nav-link.active::before { left: 8px; }
+.rail .rail-foot { padding: 12px 7px 0; }
+.rail .account { flex-wrap: wrap; gap: 10px; }
+.rail .avatar { flex: 0 0 32px; width: 32px; height: 32px; }
+.rail .account-copy { flex: 0 1 auto; width: 0; }
+.rail .account-copy strong { overflow-wrap: normal; }
+.rail .rail-foot .icon-btn { display: inline-grid; }
+.rail .rail-toggle { margin: 0 8px 10px; }
+.rail:is(.is-open, :has(:focus-visible)) { width: var(--rail-expanded); box-shadow: 8px 0 24px rgba(20,40,48,.12); }
+.rail:is(.is-open, :has(:focus-visible)) :is(.brand-copy,.nav-link span,.account-copy) { max-width: 170px; opacity: 1; }
+.rail:is(.is-open, :has(:focus-visible)) .nav-link span { margin-left: 12px; }
+.rail:is(.is-open, :has(:focus-visible)) .nav-group .eyebrow { color: var(--muted); }
+.rail:is(.is-open, :has(:focus-visible)) .nav-group .eyebrow::before { opacity: 0; }
+.rail:is(.is-open, :has(:focus-visible)) .account { flex-wrap: nowrap; }
+.rail:is(.is-open, :has(:focus-visible)) .account-copy { width: auto; flex: 1; }
+@media (hover: hover) and (pointer: fine) {
+    .rail:hover { width: var(--rail-expanded); box-shadow: 8px 0 24px rgba(20,40,48,.12); }
+    .rail:hover :is(.brand-copy,.nav-link span,.account-copy) { max-width: 170px; opacity: 1; }
+    .rail:hover .nav-link span { margin-left: 12px; }
+    .rail:hover .nav-group .eyebrow { color: var(--muted); }
+    .rail:hover .nav-group .eyebrow::before { opacity: 0; }
+    .rail:hover .account { flex-wrap: nowrap; }
+    .rail:hover .account-copy { width: auto; flex: 1; }
+    .rail .rail-toggle { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .rail, .rail * { transition: none !important; }
+}
+@media print { .app-body { margin-left: 0; } }

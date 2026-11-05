@@ -14,7 +14,9 @@ Finished-goods inspection requires an order context, the correct product measure
 
 ## My contribution
 
-Developed the system from project requirements during my internship at Top Glove, including interfaces, backend workflow logic, database integration, debugging, and user acceptance testing.
+Built the system from scratch during my internship at Top Glove: inspection interfaces, PHP rules and persistence, read-only order integration, specification snapshots, debugging, and user acceptance testing.
+
+**[Read the portfolio case study](https://zamri-portfolio.vercel.app/projects/qrex-inspection)** · **[Engineering decisions and verification](docs/engineering.md)**
 
 ## Features
 
